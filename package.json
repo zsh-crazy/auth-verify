@@ -1,6 +1,6 @@
 {
     "name": "auth-verify",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "",
     "main": "dist/index.js",
     "module": "dist/index-esm.js",
@@ -10,6 +10,10 @@
         "build": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs"
     },
     "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zsh-crazy/auth-verify.git"
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
