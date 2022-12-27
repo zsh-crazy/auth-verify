@@ -1,33 +1,28 @@
-# auth-verify
-root-check的功能，主要不想依赖chalk，也可以使用es和cjs来引入，所以对齐进行利用
+# cli-utils
+初衷是写脚手架会引入好几个库，但这些库功能单一，不复杂，所以这个库主要集中一些常用的脚手架函数，比如root-check，user-home，path-exists等，会逐渐的完善，方便写脚手架，使得引入支持ES和CJS
 
-#安装
-pnpm add -S auth-verify
+# 安装
+pnpm add -S cli-utils
 
-npm i -S auth-verify
+npm i -S cli-utils
 
-#使用
+# 使用
 该库不仅是root检查回退，也将其相关方法一起导出，比如isRoot等
 
 ```
-import {rootCheck} from 'auth-verify';
+import {rootCheck,userHome,isRoot,pathExistsSync} from 'cli-utils';
 
-rootCheck()
+
 ```
 
 或是使用cjs方式引入
 ```
-const {rootCheck} = require('auth-verify');
-
-rootCheck()
-```
-
-也可以自己去做判读处理
-```
-import {isRoot,isDocker,downgradeRoot,sudoBlock} from "auth-verify"
+const {rootCheck,userHome,isRoot,pathExistsSync} = require('cli-utils');
 
 ```
 
 
 
-主要使用root-check的方法，也可以使用 root-check库 https://github.com/sindresorhus/root-check.git
+
+
+
